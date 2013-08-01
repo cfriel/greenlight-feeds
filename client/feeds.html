@@ -1,0 +1,20 @@
+<template name="feeds_page">
+
+  <div class="span3">
+    <ul id="left-navbar" class="nav nav-tabs nav-stacked">
+      <li><a href="#existing-feeds">Existing Feeds</a></li>
+      <li><a href="#create-feed">Create Feed</a></li>
+    </ul>
+  </div>
+
+  <div class="span9">
+
+    <a id="existing-feeds"/>
+    {{> existing_feeds }}
+
+    <a id="create-feed"/>
+    {{> create_feed }}
+
+  </div>
+
+</template>

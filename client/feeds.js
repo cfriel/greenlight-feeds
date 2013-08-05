@@ -7,8 +7,5 @@
 
 
 Template.feeds_page.rendered = function(){
-
     $('#left-navbar').affix();
-
- 
 }

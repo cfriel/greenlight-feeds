@@ -1,64 +1,28 @@
 <template name="existing_feeds">
-    <div class="span9">
+    <div>
       <a id="my_sites"/>
       <div>
 	<table class="sites-table table table-hover table-bordered">
 	  <thead>
 	    <tr>
-	      <td>Url</td>
-	      <td>Template</td>
-	      <td>Users</td>
 	      <td>Owner</td>
+	      <td>From</td>
+	      <td>To</td>
+	      <td>Tranforms</td>
+	      <td>Progress</td>
 	    </tr>
 	  </thead>
 	  <tbody>
-	  {{#each my_sites}}
+	  {{#each my_feeds}}
 	  <tr>
+	    <td>{{owner}}</td>
+	    <td>{{source}}</td>
+	    <td>{{destination}}</td>
+	    <td>{{transforms}}</td>
 	    <td>
-	      <a href="/{{url}}">{{url}}</a>
-	    </td>
-	    <td>
-	      {{template}}
-	    </td>
-	    <td class="user-input-td">
-	      <div>
-		<input type="hidden" class="u" style="width: 100%;">
-		{{#each users}}
-		<option value="{{user}}">{{user}}</option>
-		{{/each}}
-                </input>
+	      <div class="progress progress-striped active">
+		<div class="bar" style="width: {{progress}};"></div>
 	      </div>
-	    </td>
-	    <td>
-	      {{owner}}
-	    </td>
-	  </tr>
-	  {{/each}}
-	  </tbody>
-	</table>
-      </div>
-
-      <a id="shared_sites"/>
-      <div>
-	<table class="sites-table table table-hover table-bordered">
-	  <thead>
-	    <tr>
-	      <td>Url</td>
-	      <td>Template</td>
-	      <td>Owner</td>
-	    </tr>
-	  </thead>
-	  <tbody>
-	  {{#each shared_sites}}
-	  <tr>
-	    <td>
-	      <a href="/{{url}}">{{url}}</a>
-	    </td>
-	    <td>
-	      {{template}}
-	    </td>
-	    <td>
-	      {{owner}}
 	    </td>
 	  </tr>
 	  {{/each}}

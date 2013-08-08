@@ -13,3 +13,13 @@ Template.existing_feeds.progress = function()
 
     return percent + "%";
 }
+
+Template.existing_feeds.owner = function()
+{
+    var self = this;
+    var ownerId = self.owner;
+    
+    var owner = Meteor.users.findOne({_id: ownerId});
+    
+    return owner.username;
+}

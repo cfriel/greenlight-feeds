@@ -2,7 +2,7 @@ Template.create_feed.created = function()
 {
     $(document).on('click', '.add-transform', function(){
 	$('#transforms').append(
-    '<div class="row"><div class="transform input-group input-append"><span class="remove-transform input-group-addon">-</span><input class="input-transform form-control" type="text" placeholder="transform"><span class="add-transform input-group-addon">+</span></div></div>'
+    '<div class="transform input-group input-append"><span class="remove-transform input-group-addon">-</span><input class="input-transform form-control" type="text" placeholder="transform"><span class="add-transform input-group-addon">+</span></div>'
 	);
 	console.log("add transform");
     });

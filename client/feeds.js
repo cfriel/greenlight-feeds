@@ -3,7 +3,7 @@ var version = "1.0";
 
 feeds = function(){};
 
-feeds.prototype = new feeds();
+feeds.prototype = new Greenlight.Package();
 
 feeds.prototype.routes =   {
     

@@ -29,9 +29,13 @@ feeds.prototype.default_route = {
 
 Greenlight.Packages.Feeds = feeds.prototype;
 
-console.log("loading feeds package");
+Meteor.startup(function(){
 
-Greenlight.register_template(name, version, Greenlight.Packages.Feeds);
+    console.log("loading feeds package");
+    
+    Greenlight.register_template(name, version, Greenlight.Packages.Feeds);
+
+});
 
 Feeds = new Meteor.Collection("feeds");
 

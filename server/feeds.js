@@ -14,13 +14,13 @@ feeds.prototype.metadata = function()
 }();
 
 
-Greenlight.Feeds = feeds.prototype;
+Greenlight.Packages.Feeds = feeds.prototype;
 
 Meteor.startup(function(){
     
     console.log("loading feeds package");
     
-    Greenlight.register_template(name, version, Greenlight.Feeds);
+    Greenlight.register_template(name, version, Greenlight.Packages.Feeds);
     
 });
 

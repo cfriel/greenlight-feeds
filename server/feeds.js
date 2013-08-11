@@ -20,7 +20,7 @@ Meteor.startup(function(){
     
     console.log("loading feeds package");
     
-    Greenlight.register_template(name, version, Greenlight.Packages.Feeds);
+    Greenlight.register_package(name, version, Greenlight.Packages.Feeds);
     
 });
 

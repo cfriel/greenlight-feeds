@@ -18,7 +18,7 @@ Greenlight.Packages.Feeds = feeds.prototype;
 
 Meteor.startup(function(){
     
-    console.log("loading feeds package");
+    Greenlight.log("loading feeds package");
     
     Greenlight.register_package(name, version, Greenlight.Packages.Feeds);
     

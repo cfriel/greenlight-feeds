@@ -1,38 +1,47 @@
 <template name="create_feed">
 
-  <div class="row">
-  <div class="from col-lg-8 input-group">
-    <span class="input-group-addon">from</span>
-    <input id="input-from" class="form-control" type="text" placeholder="source">
-  </div>
-  </div>
+<!--   <div class="row"> -->
+<!--   <div class="from col-lg-8 input-group"> -->
+<!--     <span class="input-group-addon">from</span> -->
+<!--     <input id="input-from" class="form-control" type="text" placeholder="source"> -->
+<!--   </div> -->
+<!--   </div> -->
 
-  <div id="transforms" class="col-lg-8">
-    <div class="transform input-group input-append">
-      <span class="remove-transform input-group-addon">-</span>
-      <input class="input-transform form-control" type="text" placeholder="transform">
-      <span class="add-transform input-group-addon">+</span>
-    </div>
-  </div>
+<!--   <div id="transforms" class="col-lg-8"> -->
+<!--     <div class="transform input-group input-append"> -->
+<!--       <span class="remove-transform input-group-addon">-</span> -->
+<!--       <input class="input-transform form-control" type="text" placeholder="transform"> -->
+<!--       <span class="add-transform input-group-addon">+</span> -->
+<!--     </div> -->
+<!--   </div> -->
   
-  <div class="row">
+<!--   <div class="row"> -->
 
-  <div class="to col-lg-8 input-group">
-    <span class="input-group-addon">to</span>
-    <input id="input-to" class="form-control" type="text" placeholder="destination">
-  </div>
+<!--   <div class="to col-lg-8 input-group"> -->
+<!--     <span class="input-group-addon">to</span> -->
+<!--     <input id="input-to" class="form-control" type="text" placeholder="destination"> -->
+<!--   </div> -->
 
+<!-- </div> -->
+
+<!--   <div class="row"> -->
+
+<textarea id="code" name="code">
+<routes xmlns="http://camel.apache.org/schema/spring">
+<route>
+  <from uri="timer://foo?period=5000"></from>
+  <to uri="mock:bar"></to>
+  </route>
+</routes>
+</textarea>
+
+
+<div class="col-lg-8">
+  <button id="cancel" class="btn" type="button">Cancel</button>
+  <button id="create" class="btn btn-primary" type="button">
+    <i class="icon-ok icon-white"/>
+    <span>Create</span>
+  </button>
 </div>
 
-  <div class="row">
-
-  <div class="col-lg-8">
-    <button id="cancel" class="btn" type="button">Cancel</button>
-    <button id="create" class="btn btn-primary" type="button">
-      <i class="icon-ok icon-white"/>
-      <span>Create</span>
-    </button>
-  </div>
-
-</div>
 </template>

@@ -9,7 +9,7 @@ feeds.prototype.routes =   {
     
     '/feeds': function()
     {
-	console.log("calling /feeds route");
+	Greenlight.log("calling /feeds route");
 
 	return 'feeds_page';
     }
@@ -20,7 +20,7 @@ feeds.prototype.default_route = {
 
     '/' : function()
     {
-	console.log("calling default route");
+	Greenlight.log("calling default route");
 
 	return 'feeds_page';
     }
@@ -31,7 +31,7 @@ Greenlight.Packages.Feeds = feeds.prototype;
 
 Meteor.startup(function(){
 
-    console.log("loading feeds package");
+    Greenlight.log("loading feeds package");
     
     Greenlight.register_package(name, version, Greenlight.Packages.Feeds);
 

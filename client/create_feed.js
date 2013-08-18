@@ -35,6 +35,7 @@ Template.create_feed.created = function()
 
 	feed['owner'] = Meteor.userId();
 	feed['xml'] = editor.getValue();
+	feed['state'] = 'start';
 
 	Feeds.insert(feed);
 	
